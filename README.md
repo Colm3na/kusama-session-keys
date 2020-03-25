@@ -12,7 +12,7 @@ npm install
 
 ## Usage
 
-From (Polkadot JS UI)[https://polkadot.js.org/apps/#/accounts] export your account to json format and copy to keystores folder.
+From [Polkadot JS UI](https://polkadot.js.org/apps/#/accounts) export your account to json format and copy to keystores folder.
 
 Usage:
 
