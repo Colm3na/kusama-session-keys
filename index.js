@@ -45,7 +45,7 @@ const main = async () => {
     newKeys,
     [0],
   ).signAndSend(signer, { nonce });
-  console.log(`success! tx hash is `, hash.toString());
+  console.log(`success! tx hash is`, hash.toString());
 
   process.exit(1);
   
