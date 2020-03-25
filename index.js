@@ -1,6 +1,8 @@
 const { ApiPromise, WsProvider } = require('@polkadot/api');
 const keyring = require('@polkadot/ui-keyring').default;
-keyring.loadAll({ ss58Format: 42, type: 'sr25519' });
+keyring.initKeyring({
+  isDevelopment: false,
+});
 const fs = require('fs');
 
 if (process.argv.length !== 4) {
