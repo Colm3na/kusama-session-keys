@@ -2,7 +2,7 @@
 
 Rotate session keys for your Kusama validator node with a single command!
 
-Based on a [script](https://paste.ubuntu.com/p/MhKM8vjVcD/) from @fgimenez.
+Based on a [script](https://paste.ubuntu.com/p/MhKM8vjVcD/) from [@fgimenez](https://github.com/fgimenez).
 
 ## Install
 
