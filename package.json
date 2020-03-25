@@ -1,0 +1,22 @@
+{
+  "name": "kusama-session-keys",
+  "version": "1.0.0",
+  "description": "Auto rotate session keys for a Kusama validator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "kusama",
+    "polkadot",
+    "validator",
+    "POS"
+  ],
+  "author": "mariopino",
+  "license": "GPLv3",
+  "dependencies": {
+    "@polkadot/api": "^1.8.1",
+    "@polkadot/ui-keyring": "^0.51.1",
+    "@polkadot/ui-settings": "^0.51.1"
+  }
+}
