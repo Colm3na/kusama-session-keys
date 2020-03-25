@@ -42,7 +42,8 @@ const main = async () => {
 
   // Send set keys tx
   const hash = await api.tx.session.setKeys(
-    newKeys
+    newKeys,
+    [0],
   ).signAndSend(signer, { nonce });
   console.log(`success! tx hash is `, hash.toString());
 
