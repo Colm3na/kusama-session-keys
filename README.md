@@ -14,13 +14,13 @@ npm install
 
 From [Polkadot JS UI](https://polkadot.js.org/apps/#/accounts) export your account to json format and copy to keystores folder.
 
-**Usage:
+**Usage:**
 
 ```
 node index.js <account-export.json> <account-password>
 ```
 
-**Example:
+**Example:**
 
 ```
 node index.js keystores/controller.json 1234567890
