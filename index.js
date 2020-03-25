@@ -4,7 +4,7 @@ keyring.loadAll({ ss58Format: 42, type: 'sr25519' });
 const fs = require('fs');
 
 if (process.argv.length !== 4) {
-  console.error('Usage: node index.js keystores/controller.json 1234567890 ');
+  console.error('Usage: node index.js keystores/controller.json 1234567890');
   process.exit(1);
 }
 
