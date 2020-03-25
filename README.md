@@ -2,6 +2,8 @@
 
 Rotate session keys for your Kusama validator node with a single command!
 
+Based on a [script](https://paste.ubuntu.com/p/MhKM8vjVcD/) from @fgimenez.
+
 ## Install
 
 ```
@@ -13,6 +15,8 @@ npm install
 ## Usage
 
 From [Polkadot JS UI](https://polkadot.js.org/apps/#/accounts) export your account to json format and copy to keystores folder.
+
+**NOTE:** Remember to [clear bash history](https://askubuntu.com/questions/191999/how-to-clear-bash-history-completely) after execution to ensure your password is not stored anywhere.
 
 **Usage:**
 
