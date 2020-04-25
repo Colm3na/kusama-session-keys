@@ -8,7 +8,7 @@
 # Author: Derfredy | @derfredy:matrix.org
 #
 
-LAST_KEY=`cat ~/kusama-session-keys/lastkeys.log`
+LAST_KEY=`cat lastkeys.log`
 
 curl --silent --location --request POST 'http://localhost:9933' \
 --header 'Content-Type: application/json' \
