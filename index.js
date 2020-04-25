@@ -23,7 +23,7 @@ const wsProvider = `ws://localhost:9944`;
 
 const main = async () => {
 
-  console.log("Rotate your Kusama validator session keys in one shot! [https://github.com/Colm3na/kusama-session-keys]");
+  console.log("Rotate Kusama validator session keys [https://github.com/Colm3na/kusama-session-keys]");
 
   let raw = fs.readFileSync(accountJSON, { encoding: 'utf-8' });
   const account = JSON.parse(raw);
