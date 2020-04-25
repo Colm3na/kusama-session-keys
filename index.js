@@ -33,7 +33,7 @@ const main = async () => {
   
   // Prompt user to enter password
   const { password } = await prompts({
-    type: 'text',
+    type: 'password',
     name: 'password',
     message: `Enter password for ${address}:`
   });
