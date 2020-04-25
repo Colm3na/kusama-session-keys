@@ -90,7 +90,7 @@ const main = async () => {
     // Get account nonce
     const nonce = (await api.derive.balances.account(address)).accountNonce
 
-    // Send set keys tx
+    // Sign and send setKeys tx
     const hash = await api.tx.session.setKeys(
       newKeys,
       [0],
