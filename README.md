@@ -62,13 +62,17 @@ Success! Check tx in PolkaScan: https://polkascan.io/pre/kusama/transaction/0x53
 
 ## Bonus track
 
-Thanks to @derfredy we include the script `isNodeValidating.sh`. 
+Thanks to @derfredy we include the script `author_hasSessionKeys.sh`. 
 
 We can use this script in conjunction with the `rotatekeys.js` script using the `-k` flag to know if 
-the local node is currently validating and it's using the provided session keys. 
+the local node is using the provided session keys. 
+
+This way you can know what node is validating when you have several validator nodes in a active/passive setup 
+(only one node is actively validating). You can promote a node to validator using `rotatekeys.js` at any time.
+just by executing the script in the node you want to promote.
 
 How to use it?
 
 1. Rotate the session keys as usual but adding `-k flag`. I.e: `node rotatekeys.js -c keystores/controller.json -k`.
-2. To check if the local node is validating execute `./isNodeValidating.sh`.
-3. Profit! Use it in your own scripts or automatic flows!
+2. To check if the local node is validating execute `./author_hasSessionKeys.sh`.
+3. Profit! Use it in your own scripts or automations.
