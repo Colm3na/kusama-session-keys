@@ -6,8 +6,6 @@ Based on a [script](https://paste.ubuntu.com/p/MhKM8vjVcD/) from [@fgimenez](htt
 
 Made with ❤️ from ColmenaLabs_SVQ!
 
-**NOTE:** This is intented to run locally on validator node.
-
 ## Install
 
 First of all, you need nodejs installed:
@@ -25,7 +23,7 @@ cd kusama-session-keys
 npm install
 ```
 
-Go to [Polkadot JS UI](https://polkadot.js.org/apps/#/accounts) export your account/s to json format, then copy the json file/s in the `keystores` folder.
+Go to [Polkadot JS UI](https://polkadot.js.org/apps/#/accounts) and export the controller account of your validator to json format, then copy the json file/s in the `keystores` folder.
 
 ## Usage
 
