@@ -13,7 +13,7 @@
     "POS"
   ],
   "author": "mariopino",
-  "license": "GPLv3",
+  "license": "GPL-3.0-only",
   "dependencies": {
     "@polkadot/api": "^1.8.1",
     "@polkadot/ui-keyring": "^0.51.1",
