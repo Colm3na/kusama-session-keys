@@ -18,6 +18,7 @@
     "@polkadot/api": "^1.8.1",
     "@polkadot/ui-keyring": "^0.51.1",
     "@polkadot/ui-settings": "^0.51.1",
-    "prompts": "^2.3.2"
+    "prompts": "^2.3.2",
+    "yargs": "^15.3.1"
   }
 }
