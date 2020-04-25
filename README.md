@@ -1,8 +1,8 @@
-# Kusama Session Keys
+# Rotate your Kusama validator session keys in one shot
 
 Rotate session keys for your Kusama validator node with a single command. This is intented to run locally on validator node.
 
-Based on a [script](https://paste.ubuntu.com/p/MhKM8vjVcD/) from [@fgimenez](https://github.com/fgimenez).
+Based on a [script](https://paste.ubuntu.com/p/MhKM8vjVcD/) from [@fgimenez](https://github.com/fgimenez). Thank you!
 
 ## Install
 
