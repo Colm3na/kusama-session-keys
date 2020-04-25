@@ -26,7 +26,7 @@ const main = async () => {
   const standard_input = process.stdin;
   standard_input.setEncoding('utf-8');
   console.log("Please enter password:");
-  standard_input.on('data', function (data) {
+  standard_input.on('data', async password => {
 
     // Read and import account using provided password
     let raw = fs.readFileSync(accountJSON, { encoding: 'utf-8' });
