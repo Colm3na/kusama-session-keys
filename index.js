@@ -23,7 +23,8 @@ const wsProvider = `ws://localhost:9944`;
 
 const main = async () => {
 
-  console.log("\n\x1b[36m\x1b[1m Rotate Kusama validator session keys\x1b[0m\n");
+  console.log("\n\x1b[45m\x1b[1m Rotate Kusama validator session keys\x1b[0m");
+  console.log("\n\x1b[45m\x1b[1m ------------------------------------\x1b[0m\n");
   console.log("\x1b[1m -> Check source at https://github.com/Colm3na/kusama-session-keys\x1b[0m");
   console.log("\x1b[32m\x1b[1m -> Made with love in La Colmena Labs https://colmenalabs.org/\x1b[0m\n");
 
