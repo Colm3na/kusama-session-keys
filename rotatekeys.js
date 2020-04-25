@@ -36,7 +36,7 @@ const argv = yargs
 const controller = argv.controller;
 
 // Password param
-const password = argv.password || false;
+let password = argv.password || false;
 
 // Logging to file param
 const log = argv.log || false;
