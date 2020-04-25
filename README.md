@@ -8,11 +8,11 @@ Based on a [script](https://paste.ubuntu.com/p/MhKM8vjVcD/) from [@fgimenez](htt
 
 ## Install
 
-You need npm installed. This works for ubuntu 18.04
+You need nodejs installed.
 
 ```
 apt update
-apt install npm
+apt install nodejs
 ```
 
 ```
