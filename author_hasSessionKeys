@@ -1,9 +1,7 @@
 #!/bin/bash
 #
-# Check if node is actively validating given a hex. session keys
-#
-# The script checks if the provided session keys are in use
-# and returns true or false 
+# Returns true if node is actively validating 
+# using the session keys saved in lastkeys.log file
 #
 # Author: Derfredy | @derfredy:matrix.org
 #
