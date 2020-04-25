@@ -59,3 +59,16 @@ Output:
 Success! Check tx in PolkaScan: https://polkascan.io/pre/kusama/transaction/0x5368509f08e622ddd7552c8cf73a306e7d8672688d9ff8f790c42831652f6130
 
 ```
+
+## Bonus track
+
+Thanks to @derfredy we include the script `isNodeValidating.sh`. 
+
+We can use this script in conjunction with the `rotatekeys.js` script using the `-k` flag to know if 
+the local node is currently validating and it's using the provided session keys. 
+
+How to use it?
+
+1. Rotate the session keys as usual but adding `-k flag`. I.e: `node rotatekeys.js -c keystores/controller.json -k`.
+2. To check if the local node is validating execute `./isNodeValidating.sh`.
+3. Profit! Use it in your own scripts or automatic flows!
