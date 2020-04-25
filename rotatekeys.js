@@ -102,7 +102,7 @@ const main = async () => {
     }
 
     if (lastkeys) {
-      fs.writeFileSync(`lastkeys.log`, newKeys.toHex())
+      fs.writeFileSync(`lastkeys.log`, newKeys.toHex());
     }
 
     process.exit(1);
