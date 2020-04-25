@@ -28,7 +28,7 @@ node rotatekeys.js -c controller.json -p password
 
 Options:
   --controller, -c  Controller account json file path        [string] [required]
-  --password, -p    Controller account password, if not set stdin will be used
+  --password, -p    Controller account password, or stdin if this is not set
                                                                         [string]
   --log, -l         log (append) session keys to sessionkeys.log file  [boolean]
   --lastkeys, -k    Save last session keys to lastkeys.log file        [boolean]

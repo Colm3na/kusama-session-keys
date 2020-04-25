@@ -26,7 +26,7 @@ const argv = yargs
   })
   .option('password', {
       alias: 'p',
-      description: 'Controller account password, if not set stdin will be used',
+      description: 'Controller account password, or stdin if this is not set',
       type: 'string',
   })
   .option('log', {
