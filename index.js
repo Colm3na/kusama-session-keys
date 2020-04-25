@@ -35,6 +35,7 @@ const main = async () => {
     name: 'password',
     message: `Enter password for ${address}:`
   });
+  console.log(`password:`, password);
 
   if (password) {
     
