@@ -23,17 +23,20 @@ const wsProvider = `ws://localhost:9944`;
 
 const main = async () => {
 
-  console.log("Rotate your Kusama validator session keys in one shot! [https://github.com/Colm3na/kusama-session-keys]")
+  console.log("Rotate your Kusama validator session keys in one shot! [https://github.com/Colm3na/kusama-session-keys]");
+
+  let raw = fs.readFileSync(accountJSON, { encoding: 'utf-8' });
+  const account = JSON.parse(raw);
+  const address = account.address;
   
   // Prompt user to enter password
+  console.log(`Enter password for ${address}:`);
   prompt.start();
   prompt.get(['password'], async (err, result) => {
 
     if (!err) {
       const password = result.password;
-      let raw = fs.readFileSync(accountJSON, { encoding: 'utf-8' });
-      const account = JSON.parse(raw);
-      const address = account.address;
+      
       console.log(`Importing account`, address)
       const signer = keyring.restoreAccount(account, password); 
       signer.decodePkcs8(password);
