@@ -23,18 +23,20 @@ Go to [Polkadot JS UI](https://polkadot.js.org/apps/#/accounts) and export the c
 ## Usage
 
 ```
+$ node rotatekeys.js --help
 node rotatekeys.js -c controller.json -p password
 
 Options:
   --controller, -c  Controller account json file path        [string] [required]
   --password, -p    Controller account password, if not set stdin will be used
                                                                         [string]
-  --log, -l         log session keys to file                           [boolean]
+  --log, -l         log (append) session keys to sessionkeys.log file  [boolean]
+  --lastkeys, -k    Save last session keys to lastkeys.log file        [boolean]
   --help, -h        Show help                                          [boolean]
-  --version         Show version number                                [boolean]
+  --version, -v     Show version number                                [boolean]
 ```
 
-**Example:**
+Example (will ask for the password from stdin):
 
 ```
 node rotatekeys.js -c keystores/controller.json
