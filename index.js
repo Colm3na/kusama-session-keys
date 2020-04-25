@@ -61,7 +61,7 @@ const main = async () => {
       newKeys,
       [0],
     ).signAndSend(signer, { nonce });
-    console.log(`\n\x1b[42m\x1b[1m Success! Check tx in PolkaScan: https://polkascan.io/pre/kusama/transaction/${hash.toString()}\x1b[0m`);
+    console.log(`\n\x1b[42m\x1b[1m Success! Check tx in PolkaScan: https://polkascan.io/pre/kusama/transaction/${hash.toString()}\x1b[0m\n`);
 
     process.exit(1);
   }
