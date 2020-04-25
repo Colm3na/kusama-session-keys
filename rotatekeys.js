@@ -90,7 +90,7 @@ const main = async () => {
     console.log(`\n\x1b[32m\x1b[1mSuccess! \x1b[37mCheck tx in PolkaScan: https://polkascan.io/pre/kusama/transaction/${hash.toString()}\x1b[0m\n`);
 
     if (log) {
-      fs.appendFileSync(`sessionkeys.log`, `${new Date()} - ${hash.toString()}`);
+      fs.appendFileSync(`sessionkeys.log`, `${new Date()} - ${newKeys.toHex()}`);
     }
 
     process.exit(1);
