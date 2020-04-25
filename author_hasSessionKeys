@@ -1,6 +1,12 @@
 #!/bin/bash
 #
+# Check if node is actively validating given a hex. session keys
+#
+# The script checks if the provided session keys are in use
+# and returns true or false 
+#
 # Author: Derfredy | @derfredy:matrix.org
+#
 
 LAST_KEY=`cat ~/kusama-session-keys/lastkeys.log`
 
