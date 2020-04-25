@@ -36,7 +36,7 @@ Options:
   --version, -v     Show version number                                [boolean]
 ```
 
-Example (will ask for the password from stdin):
+Example (will ask the password from stdin):
 
 ```
 node rotatekeys.js -c keystores/controller.json
