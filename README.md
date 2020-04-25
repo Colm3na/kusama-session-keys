@@ -51,7 +51,7 @@ Output:
  Rotate Kusama validator session keys
 
  - Check source at https://github.com/Colm3na/kusama-session-keys
- - Made with love in La Colmena Labs https://colmenalabs.org/
+ - Made with love from ColmenaLabs_SVQ https://colmenalabs.org/
 
 ✔ Enter password for GTzRQPzkcuynHgkEHhsPBFpKdh4sAacVRsnd8vYfPpTMeEY: … ***************
 
