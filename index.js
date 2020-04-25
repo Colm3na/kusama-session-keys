@@ -4,7 +4,7 @@ keyring.initKeyring({
   isDevelopment: false,
 });
 const fs = require('fs');
-const prompt = require('prompt');
+const prompts = require('prompts');
 
 if (process.argv.length !== 3) {
   console.error('Usage: node index.js <account_json_export_file_path>');
@@ -30,40 +30,41 @@ const main = async () => {
   const address = account.address;
   
   // Prompt user to enter password
-  console.log(`Enter password for ${address}:`);
-  prompt.start();
-  prompt.get(['password'], async (err, result) => {
-
-    if (!err) {
-      const password = result.password;
-      
-      console.log(`Importing account`, address)
-      const signer = keyring.restoreAccount(account, password); 
-      signer.decodePkcs8(password);
-
-      // Connect to node
-      const provider = new WsProvider(wsProvider);
-      const api = await ApiPromise.create({ provider });
-      console.log(`Connected to node websocket`, wsProvider);
-
-      // Get new session keys
-      const newKeys = await api.rpc.author.rotateKeys();
-      console.log(`New generated keys are`, newKeys.toHex());
-
-      // Get account nonce
-      const nonce = (await api.derive.balances.account(address)).accountNonce
-      console.log(`Account nonce is`, nonce.toHuman());
-
-      // Send set keys tx
-      const hash = await api.tx.session.setKeys(
-        newKeys,
-        [0],
-      ).signAndSend(signer, { nonce });
-      console.log(`Success transaction! tx hash is`, hash.toString());
-
-      process.exit(1);
-    }
+  const password = await prompts({
+    type: 'text',
+    name: 'password',
+    message: `Enter password for ${address}:`
   });
+
+  if (password) {
+    
+    console.log(`Importing account ${address}`, address)
+    const signer = keyring.restoreAccount(account, password); 
+    signer.decodePkcs8(password);
+
+    // Connect to node
+    console.log(`Connecting to`, wsProvider);
+    const provider = new WsProvider(wsProvider);
+    const api = await ApiPromise.create({ provider });
+    
+    // Get new session keys
+    const newKeys = await api.rpc.author.rotateKeys();
+    console.log(`New session keys`, newKeys.toHex());
+
+    // Get account nonce
+    const nonce = (await api.derive.balances.account(address)).accountNonce
+    console.log(`Account nonce is`, nonce.toHuman());
+
+    // Send set keys tx
+    const hash = await api.tx.session.setKeys(
+      newKeys,
+      [0],
+    ).signAndSend(signer, { nonce });
+    console.log(`Success! tx hash is ${hash.toString()}, check tx in https://polkascan.io/pre/kusama/transaction/${hash.toString()}`);
+
+    process.exit(1);
+  }
+
   process.exit();
 }
 
