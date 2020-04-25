@@ -2,9 +2,13 @@
   "name": "kusama-session-keys",
   "version": "1.0.0",
   "description": "Auto rotate session keys for a Kusama validator",
-  "main": "index.js",
+  "main": "rotatekeys.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Colm3na/kusama-session-keys"
   },
   "keywords": [
     "kusama",
