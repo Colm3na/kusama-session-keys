@@ -6,6 +6,13 @@ Based on a [script](https://paste.ubuntu.com/p/MhKM8vjVcD/) from [@fgimenez](htt
 
 ## Install
 
+You need npm installed. This works for ubuntu 18.04
+
+```
+apt update
+apt install npm
+```
+
 ```
 git clone https://github.com/Colm3na/kusama-session-keys.git
 cd kusama-session-keys
