@@ -8,7 +8,7 @@ Made with ❤️ from ColmenaLabs_SVQ!
 
 ## Install
 
-First of all, you need nodejs installed:
+First of all, you need nodejs (>= v10.20.1) installed:
 
 ```
 apt update
