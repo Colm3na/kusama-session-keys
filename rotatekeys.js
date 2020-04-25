@@ -1,3 +1,13 @@
+/**
+ * rotatekeys.js
+ *  
+ * Rotate your Kusama validator session keys in one shot.
+ *
+ * https://github.com/Colm3na/kusama-session-keys
+ * 
+ * Author: Mario Pino | @mariopino:matrix.org
+ */
+
 const { ApiPromise, WsProvider } = require('@polkadot/api');
 const keyring = require('@polkadot/ui-keyring').default;
 keyring.initKeyring({

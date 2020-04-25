@@ -1,7 +1,7 @@
 {
   "name": "kusama-session-keys",
   "version": "1.0.0",
-  "description": "Auto rotate session keys for a Kusama validator",
+  "description": "Rotate your Kusama validator session keys in one shot",
   "main": "rotatekeys.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
