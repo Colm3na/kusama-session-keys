@@ -4,6 +4,8 @@ Rotate session keys for your Kusama validator node with a single command.
 
 Based on a [script](https://paste.ubuntu.com/p/MhKM8vjVcD/) from [@fgimenez](https://github.com/fgimenez). Thank you!
 
+Made with ❤️ from ColmenaLabs_SVQ!
+
 **NOTE:** This is intented to run locally on validator node.
 
 ## Install
@@ -28,13 +30,13 @@ Go to [Polkadot JS UI](https://polkadot.js.org/apps/#/accounts) export your acco
 ## Usage
 
 ```
-node index.js <account_json_export_file_path>
+node rotatekeys.js <account_json_export_file_path>
 ```
 
 **Example:**
 
 ```
-node index.js keystores/controller.json
+node rotatekeys.js keystores/controller.json
 ```
 
 Output:
