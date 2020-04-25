@@ -40,29 +40,29 @@ const main = async () => {
 
   if (password) {
     
-    console.log(`Importing account ${address}`, address)
+    console.log(`\n\x1b[1mImporting account ${address}\x1b[0m`, address)
     const signer = keyring.restoreAccount(account, password); 
     signer.decodePkcs8(password);
 
     // Connect to node
-    console.log(`Connecting to`, wsProvider);
+    console.log(`\x1b[1mConnecting to\x1b[0m`, wsProvider);
     const provider = new WsProvider(wsProvider);
     const api = await ApiPromise.create({ provider });
     
     // Get new session keys
     const newKeys = await api.rpc.author.rotateKeys();
-    console.log(`New session keys`, newKeys.toHex());
+    console.log(`\x1b[1mNew session keys\x1b[0m`, newKeys.toHex());
 
     // Get account nonce
     const nonce = (await api.derive.balances.account(address)).accountNonce
-    console.log(`Account nonce is`, nonce.toHuman());
+    console.log(`\x1b[1mAccount nonce is\x1b[0m`, nonce.toHuman());
 
     // Send set keys tx
     const hash = await api.tx.session.setKeys(
       newKeys,
       [0],
     ).signAndSend(signer, { nonce });
-    console.log(`\x1b[32mSuccess! tx hash is ${hash.toString()}, check tx in https://polkascan.io/pre/kusama/transaction/${hash.toString()}\x1b[0m`);
+    console.log(`\x1b[32m\x1b[1mSuccess! tx hash is ${hash.toString()}, check tx in https://polkascan.io/pre/kusama/transaction/${hash.toString()}\x1b[0m`);
 
     process.exit(1);
   }
