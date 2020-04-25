@@ -8,14 +8,9 @@ Made with ❤️ from ColmenaLabs_SVQ!
 
 ## Install
 
-First of all, you need nodejs (>= v10.20.1) installed:
+First of all, you need nodejs (>= v10.20.1) installed, check https://nodejs.org/en/download/ to install it in your platform.
 
-```
-apt update
-apt install nodejs
-```
-
-Then clone the repository and install the needed dependencies:
+Clone the repository and install the needed dependencies:
 
 ```
 git clone https://github.com/Colm3na/kusama-session-keys.git
