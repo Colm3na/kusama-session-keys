@@ -33,8 +33,8 @@ const argv = yargs
   .usage("node rotatekeys.js -c controller.json -p password")
   .help()
   .alias('help', 'h')
-  .alias('version', 'v')
   .version()
+  .alias('version', 'v')
   .argv;
 
 // Controller account json file
