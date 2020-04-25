@@ -23,25 +23,26 @@ const wsProvider = `ws://localhost:9944`;
 
 const main = async () => {
 
-  console.log("Rotate Kusama validator session keys [https://github.com/Colm3na/kusama-session-keys]");
+  console.log("\x1b[45mRotate Kusama validator session keys script\x1b[0m");
+  console.log("\x1b[1mCheck source at https://github.com/Colm3na/kusama-session-keys\x1b[0m");
+  console.log("\x1b[1mMade with love in La Colmena Labs https://colmenalabs.org/\x1b[0m");
 
   let raw = fs.readFileSync(accountJSON, { encoding: 'utf-8' });
   const account = JSON.parse(raw);
   const address = account.address;
   
   // Prompt user to enter password
-  const input = await prompts({
+  const { password } = await prompts({
     type: 'text',
     name: 'password',
     message: `Enter password for ${address}:`
   });
-  console.log(`password:`, input.password);
 
-  if (input.password) {
+  if (password) {
     
     console.log(`Importing account ${address}`, address)
-    const signer = keyring.restoreAccount(account, input.password); 
-    signer.decodePkcs8(input.password);
+    const signer = keyring.restoreAccount(account, password); 
+    signer.decodePkcs8(password);
 
     // Connect to node
     console.log(`Connecting to`, wsProvider);
