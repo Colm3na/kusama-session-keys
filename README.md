@@ -8,12 +8,14 @@ Based on a [script](https://paste.ubuntu.com/p/MhKM8vjVcD/) from [@fgimenez](htt
 
 ## Install
 
-You need nodejs installed.
+First of all, you need nodejs installed:
 
 ```
 apt update
 apt install nodejs
 ```
+
+Then clone the repository and install the needed dependencies:
 
 ```
 git clone https://github.com/Colm3na/kusama-session-keys.git
@@ -21,11 +23,9 @@ cd kusama-session-keys
 npm install
 ```
 
+Go to [Polkadot JS UI](https://polkadot.js.org/apps/#/accounts) export your account/s to json format, then copy the json file/s in the `keystores` folder.
+
 ## Usage
-
-From [Polkadot JS UI](https://polkadot.js.org/apps/#/accounts) export your account to json format and copy the file in `keystores` folder.
-
-**Usage:**
 
 ```
 node index.js <account_json_export_file_path>
