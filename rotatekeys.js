@@ -21,7 +21,12 @@ const argv = yargs
   })
   .option('log', {
     alias: 'l',
-    description: 'log session keys to sessionkeys.log file',
+    description: 'log (append) session keys to sessionkeys.log file',
+    type: 'boolean',
+  })
+  .option('lastkeys', {
+    alias: 'k',
+    description: 'Save last session keys to lastkeys.log file',
     type: 'boolean',
   })
   .demandOption(['controller'], 'Please provide the controller account json file path')
@@ -40,6 +45,9 @@ let password = argv.password || false;
 
 // Logging to file param
 const log = argv.log || false;
+
+// Logging to file param
+const lastkeys = argv.lastkeys || false;
 
 // Node websocket
 const wsProvider = `ws://localhost:9944`;
@@ -91,6 +99,10 @@ const main = async () => {
 
     if (log) {
       fs.appendFileSync(`sessionkeys.log`, `${new Date()} - ${newKeys.toHex()}`);
+    }
+
+    if (lastkeys) {
+      fs.writeFileSync(`lastkeys.log`, newKeys.toHex())
     }
 
     process.exit(1);
