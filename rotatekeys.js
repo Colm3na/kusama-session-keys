@@ -21,7 +21,7 @@ const argv = yargs
   })
   .option('log', {
     alias: 'l',
-    description: 'log session keys to file',
+    description: 'log session keys to sessionkeys.log file',
     type: 'boolean',
   })
   .demandOption(['controller'], 'Please provide the controller account json file path')
