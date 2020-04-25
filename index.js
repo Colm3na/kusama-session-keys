@@ -30,18 +30,18 @@ const main = async () => {
   const address = account.address;
   
   // Prompt user to enter password
-  const password = await prompts({
+  const input = await prompts({
     type: 'text',
     name: 'password',
     message: `Enter password for ${address}:`
   });
-  console.log(`password:`, password);
+  console.log(`password:`, input.password);
 
-  if (password) {
+  if (input.password) {
     
     console.log(`Importing account ${address}`, address)
-    const signer = keyring.restoreAccount(account, password); 
-    signer.decodePkcs8(password);
+    const signer = keyring.restoreAccount(account, input.password); 
+    signer.decodePkcs8(input.password);
 
     // Connect to node
     console.log(`Connecting to`, wsProvider);
