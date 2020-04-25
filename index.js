@@ -55,14 +55,14 @@ const main = async () => {
 
     // Get account nonce
     const nonce = (await api.derive.balances.account(address)).accountNonce
-    console.log(`\x1b[1mAccount nonce is\x1b[0m`, nonce.toHuman());
 
     // Send set keys tx
     const hash = await api.tx.session.setKeys(
       newKeys,
       [0],
     ).signAndSend(signer, { nonce });
-    console.log(`\x1b[32m\x1b[1mSuccess! tx hash is ${hash.toString()}, check tx in https://polkascan.io/pre/kusama/transaction/${hash.toString()}\x1b[0m`);
+    console.log(`\n\x1b[32m\x1b[1mSuccess! tx hash is ${hash.toString()}!\x1b[0m`);
+    console.log(`\x1b[32m\x1b[1m -> Check tx in PolkaScan: https://polkascan.io/pre/kusama/transaction/${hash.toString()}\x1b[0m`);
 
     process.exit(1);
   }
