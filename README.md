@@ -67,7 +67,7 @@ Thanks to @derfredy we include the script `author_hasSessionKeys.sh`.
 We can use this script in conjunction with the `rotatekeys.js` script using the `-k` flag to know if 
 the local node is using the provided session keys. 
 
-This way you can know what node is validating when you have several validator nodes in a active/passive setup 
+It's useful when you have several validator nodes in a active/passive setup 
 (only one node is actively validating). You can promote a node to validator using `rotatekeys.js` at any time.
 just by executing the script in the node you want to promote.
 
