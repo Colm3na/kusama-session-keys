@@ -19,10 +19,10 @@
   "author": "mariopino",
   "license": "GPL-3.0-only",
   "dependencies": {
-    "@polkadot/api": "^1.19.1",
-    "@polkadot/ui-keyring": "^0.51.1",
-    "@polkadot/ui-settings": "^0.51.1",
+    "@polkadot/api": "^1.28.1",
+    "@polkadot/ui-keyring": "^0.57.3",
+    "@polkadot/ui-settings": "^0.57.3",
     "prompts": "^2.3.2",
-    "yargs": "^15.3.1"
+    "yargs": "^15.4.1"
   }
 }
